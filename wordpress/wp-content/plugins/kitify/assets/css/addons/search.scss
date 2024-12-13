@@ -1,0 +1,45 @@
+@import '_mixins';
+.kitify-search {
+	position: relative
+}
+.kitify-search__label {
+	display: block;
+	flex: 1 1 auto;
+	margin: 0
+}
+.kitify-search__form {
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto
+}
+.kitify-search__field {
+	width: 100%
+}
+.kitify-search__field[type=search] {
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: none
+}
+.kitify-search__submit {
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	border: none
+}
+.kitify-search__submit-icon + .kitify-search__submit-label {
+	margin-left: 4px
+}
+.kitify-search__popup-trigger-container {
+	line-height: 0;
+	> a {
+		display: flex;
+		align-items: center;
+		.kitify-search__trigger-label {
+			display: none;
+			@include breakpoint(large) {
+				display: flex;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+@import '_foundation';
+@import '_settings';
+@mixin transition($property, $duration, $easing: linear) {
+	transition: $property $duration $easing;
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+}
+@mixin global_transition() {
+	transition: all 0.3s ease-in-out;
+}
+@mixin nova_icon($icon) {
+  font-family: "iNova" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	content: $icon;
+}
+@function v($var) {
+  @return var(--#{$var});
+}
+@mixin rotate_close_btn() {
+	transition: transform 0.3s;
+	display: inline-block;
+
+	&:hover {
+		transform: rotate(90deg);
+	}
+}
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+@mixin scrollbar() {
+	flex-wrap: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

@@ -1,0 +1,9 @@
+.kitify-nova-menu__mobile-trigger.kitify-burger-menu {
+  display: flex;
+}
+.kitify-nova-menu__mobile-trigger.kitify-burger-menu a {
+  line-height: 0;
+} 
+.kitify-nova-menu__mobile-trigger.kitify-burger-menu .kitify-nova-menu__mobile-trigger-icon {
+  font-size: 1.3125rem;
+}
